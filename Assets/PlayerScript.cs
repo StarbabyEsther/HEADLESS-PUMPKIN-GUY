@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
     Rigidbody2D rb;
 
     Vector2 direction;
+    Vector2 startPosition;
     bool onGround;
 
     public float speed;
@@ -15,6 +16,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        startPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -61,4 +63,9 @@ void OnCollisionExit2D(Collision2D collision)
         onGround = false;
     }
 }
+    //Death
+    public void Die()
+    {
+        transform.position = startPosition;
+    }
 }
