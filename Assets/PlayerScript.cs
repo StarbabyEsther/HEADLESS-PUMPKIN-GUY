@@ -47,6 +47,10 @@ public class PlayerScript : MonoBehaviour
     void OnMove(InputValue movement)
     {
         direction = movement.Get<Vector2>();
+        if(direction.x < 0)
+        { 
+         direction.x = 0;
+        }
     }
 
     void OnJump()
@@ -67,7 +71,7 @@ public class PlayerScript : MonoBehaviour
         GameObject go = collision.gameObject;
 
         // Does the GameObject we collided with have the tag "Ground"?
-        if (go.tag == "Ground")
+        if (go.tag == "Ground" || go.tag == "Spike")
         {
             // Yes, we are on the ground.
             onGround = true;
