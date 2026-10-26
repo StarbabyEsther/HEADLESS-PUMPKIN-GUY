@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class PlayerScript : MonoBehaviour
 {
 
     Rigidbody2D rb;
+    Animator animator;
 
     Vector2 direction;
     Vector2 startPosition;
@@ -22,6 +24,8 @@ public class PlayerScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
         vulnerable = true;
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,6 +37,11 @@ public class PlayerScript : MonoBehaviour
         {
             Debug.Log("dead");
         }
+
+        //Control running and jumping animations
+        float movementSpeed = Mathf.Abs(rb.linearVelocity.x);
+        animator.SetFloat("Velocity", movementSpeed);
+        animator.SetBool("IsGrounded", onGround);
     }
 
     void OnMove(InputValue movement)
@@ -45,10 +54,14 @@ public class PlayerScript : MonoBehaviour
         if(onGround == true)
         {
          rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpForce);
+
+            //Trigger jump animation
+            onGround = false;
+            animator.SetBool("IsGrounded", false);
         }
     }
 
-    async void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         // Access the GameObject the collider is attached to.
         GameObject go = collision.gameObject;
