@@ -14705,6 +14705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4999e4add1d9eb04492663029798c4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  target_time: 5
   speed: 10
   JumpForce: 14
   light_level: 0
@@ -15066,6 +15067,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1996239996}
   - {fileID: 1868425462}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25500,7 +25502,7 @@ GameObject:
   - component: {fileID: 1270433602}
   m_Layer: 0
   m_Name: Spikes
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32356,6 +32358,7 @@ GameObject:
   - component: {fileID: 1996239995}
   - component: {fileID: 1996239997}
   - component: {fileID: 1996239998}
+  - component: {fileID: 1996239999}
   m_Layer: 0
   m_Name: Invisible wall
   m_TagString: Untagged
@@ -32431,12 +32434,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996239994}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.12, y: 0.16, z: 0}
-  m_LocalScale: {x: 1, y: 9.81, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.83, y: 0.16, z: 10}
+  m_LocalScale: {x: 1, y: 20.437176, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 519420032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1996239997
 BoxCollider2D:
@@ -32496,6 +32499,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea8e65632b2938428a93cab7227feb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &1996239999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996239994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d22eb1c341a6c41beb6110266c3a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  scrollSpeed: 0
 --- !u!1 &1997816740
 GameObject:
   m_ObjectHideFlags: 0
@@ -40661,7 +40677,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 848662875}
-  - {fileID: 1996239996}
   - {fileID: 1857788212}
   - {fileID: 431258533}
   - {fileID: 1413377797}

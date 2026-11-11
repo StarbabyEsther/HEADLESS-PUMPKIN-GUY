@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     bool onGround;
     bool vulnerable;
 
+    public float target_time = 5.0f;
     public float speed;
     public float JumpForce;
     public int light_level;
@@ -36,6 +37,16 @@ public class PlayerScript : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("dead");
+        }
+
+        if (vulnerable == false)
+        {
+            target_time -= Time.deltaTime;
+            if (target_time <= 0.0f)
+            {
+                vulnerable = true;
+                target_time = 3.0f;
+            }
         }
 
         //Control running and jumping animations
@@ -85,13 +96,14 @@ public class PlayerScript : MonoBehaviour
             // Destroy the other GameObject.
             Object.Destroy(go);
         }
-        else if (go.tag == "Spike")
+        if (go.tag == "Spike")
         {
             if (vulnerable == true)
             {
                 //vulnerable = false;
                 health -= 1;
-                
+                vulnerable = false;
+                Debug.Log(health);
                  
             }
             
