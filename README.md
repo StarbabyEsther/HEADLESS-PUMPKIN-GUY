@@ -3,7 +3,7 @@
 - [X] Moving sprites and input - Yes
 - [X] Item Collection - Yes
 - [X] Collision and physics - Yes
-- [] Timing 
+- [ ] Timing 
 - [X] Invisible walls - Yes
 - [X] Audio - Yes
 - [X] UI(Menus, HUD) - Yes
