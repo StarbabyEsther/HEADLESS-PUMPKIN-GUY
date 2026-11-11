@@ -96,7 +96,11 @@ public class PlayerScript : MonoBehaviour
             // Destroy the other GameObject.
             Object.Destroy(go);
         }
-        if (go.tag == "Spike")
+        else if (go.tag == "KillBox")
+        {
+            health = 0;
+        }
+        if (go.tag == "Spike" || go.tag == "SpikeWall")
         {
             if (vulnerable == true)
             {

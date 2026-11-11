@@ -8,6 +8,8 @@ TagManager:
   - Candle
   - Spike
   - CandleText
+  - KillBox
+  - SpikeWall
   layers:
   - Default
   - TransparentFX
