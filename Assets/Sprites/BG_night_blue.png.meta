@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: bab705b32a1185945a16be8e1b60c26d
+guid: baca48437107a744eb22dfe787f3f296
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4363361329782683164
-    second: Candy Corn_0
-  - first:
-      213: -3704636126658535874
-    second: Candy Corn_1
-  - first:
-      213: 7880517231650333111
-    second: Candy Corn_2
+      213: -3227907644339660412
+    second: BG_night_blue_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -62,7 +56,9 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationMethod: 0
   spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -106,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Candy Corn_0
+      name: BG_night_blue_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 65
-        height: 124
+        width: 1920
+        height: 1075
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,52 +117,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e980a71df93273c0800000000000000
-      internalID: -4363361329782683164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Candy Corn_1
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 0
-        width: 56
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e3e5070221d769cc0800000000000000
-      internalID: -3704636126658535874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Candy Corn_2
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 0
-        width: 65
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b1ecde5ba83d5d60800000000000000
-      internalID: 7880517231650333111
+      spriteID: 489dd53891b2433d0800000000000000
+      internalID: -3227907644339660412
       vertices: []
       indices: 
       edges: []
@@ -185,9 +137,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Candy Corn_0: -4363361329782683164
-      Candy Corn_1: -3704636126658535874
-      Candy Corn_2: 7880517231650333111
+      BG_night_blue_0: -3227907644339660412
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
