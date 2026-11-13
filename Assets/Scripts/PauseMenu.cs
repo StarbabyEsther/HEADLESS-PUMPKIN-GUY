@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +5,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject container;
 
+    //Input.GetKeyDown(KeyCode.Escape)
 
     // Update is called once per frame
     void Update()
@@ -21,12 +21,6 @@ public class PauseMenu : MonoBehaviour
     {
         container.SetActive(false);
         Time.timeScale = 1;
-    }
-
-    public void MainMenuButton()
-    {
-        Time.timeScale = 1;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Main Menu");
     }
 
 }
